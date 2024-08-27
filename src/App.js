@@ -8,7 +8,7 @@ import './App.css';
 function App() {
     const emailService = new EmailService([new MockEmailProvider1(), new MockEmailProvider2()]);
 
-    const [email] = useState({ id: 'email1', to: 'user@example.com', body: 'Hello!' });
+    const [email] = useState({ id: 'email1', to: 'shaikarshad8221@gmail.com', body: 'Hello!' });
     const [status, setStatus] = useState([]);
 
     const sendEmail = async () => {
@@ -26,6 +26,8 @@ function App() {
     return (
         <div className="container">
             <h1>Email Sending Service</h1>
+            <input type="text" name="text" className="input" placeholder="Enter text here"
+            /></div>
             <button onClick={sendEmail}>Send Email</button>
             <h2>Status:</h2>
             <ul className="status-list">
